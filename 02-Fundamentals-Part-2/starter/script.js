@@ -424,49 +424,69 @@ if (mark.bmi > john.bmi) {
 // }
 
 
-
-
 /*
 
 const jonas = [
     'Jonas',
-    'Schmedtman',
+    'Schmedtmann',
     2037 - 1991,
     'teacher',
-    ['Micael', 'Peter', 'Steven'],
+    ['Michael', 'Peter', 'Steven'],
     true
 ];
-
+const types = [];
 
 for (let i = 0; i < jonas.length; i++) {
+    // Reading from jonas array
     console.log(jonas[i], typeof jonas[i]);
 
-    // filling types array
+    // Filling types array
     // types[i] = typeof jonas[i];
-
     types.push(typeof jonas[i]);
 }
 
-
 console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+console.log('---ONLY STRINGS ---')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== 'string') continue;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+//break completely terminates the whole loop
+//in this example it is going to stop when it finds a number 
+
+console.log('--- Break With Number---')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+
 */
 
 
 
 
-// const interestedIn = prompt('What do you want to know about Jonas? choose between firstName, lastName, age, job, and friends');
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
 
-// if (jonas[interestedIn]) {
-//     console.log(jonas[interestedIn]);
-// } else {
-//     console.log('Wrong request! What do you want to know about Jonas? choose between firstName, lastName, age, job, and friends')
-// }
-
-
-let person = prompt("Please enter your name", "Harry Potter");
-
-if (person != null) {
-    console.log(prompt("Hello " + person + "! How are you today?"));
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(jonas[i]);
 }
-
-console.log('Patrick Gandy 3.0');
