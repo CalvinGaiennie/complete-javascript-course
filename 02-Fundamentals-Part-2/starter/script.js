@@ -464,7 +464,7 @@ for (let i = 0; i < jonas.length; i++) {
 }
 
 //break completely terminates the whole loop
-//in this example it is going to stop when it finds a number 
+//in this example it is going to stop when it finds a number
 
 console.log('--- Break With Number---')
 for (let i = 0; i < jonas.length; i++) {
@@ -477,16 +477,82 @@ for (let i = 0; i < jonas.length; i++) {
 */
 
 
+//counting backwards in a loop looping backwards
 
 
+
+
+/*
 const jonas = [
     'Jonas',
     'Schmedtmann',
     2037 - 1991,
     'teacher',
     ['Michael', 'Peter', 'Steven'],
+    true
 ];
 
+
+// how to create a loop inside a loop
 for (let i = jonas.length - 1; i >= 0; i--) {
-    console.log(jonas[i]);
+    console.log(i, jonas[i]);
 }
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`-------Starting Exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repitition ${rep}`);
+    }
+}
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repitition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1
+// console.log(dice);
+
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log('Loop is about to end...');
+}
+*/
+
+
+let bills = [
+    22,
+    295,
+    176,
+    440,
+    37,
+    105,
+    10,
+    1100,
+    86,
+    52
+];
+
+let tips = []
+let totals = []
+
+
+let calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+for (let i = 0; i <= 9; i++) {
+    tips[i] = calcTip(bills[i]);
+}
+
+console.log(tips)
+
+
+for (let i = 0; i <= 9; i++) {
+    totals[i] = tips[i] + bills[i];
+}
+
+console.log(totals);
